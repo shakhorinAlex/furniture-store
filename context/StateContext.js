@@ -9,9 +9,60 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  const [timeLeft, setTimeLeft] = useState();
+
+  const currentMonth = new Date().toLocaleString("default", { month: "long" });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const daysLeft =
+        new Date(
+          new Date().getFullYear(),
+          new Date().getMonth() + 1,
+          0
+        ).getDate() - new Date().getDate();
+      const hoursLeft = 24 - new Date().getHours();
+      const minutesLeft = 60 - new Date().getMinutes();
+      const secondsLeft = 60 - new Date().getSeconds();
+
+      const days = daysLeft < 10 ? `0${daysLeft}` : daysLeft;
+      const hours = hoursLeft < 10 ? `0${hoursLeft}` : hoursLeft;
+      const minutes = minutesLeft < 10 ? `0${minutesLeft}` : minutesLeft;
+      const seconds = secondsLeft < 10 ? `0${secondsLeft}` : secondsLeft;
+      setTimeLeft(`${days}:${hours}:${minutes}:${seconds}`);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   let foundProduct;
-  let index;
+  let index;  
+
+
+  // save cartItems, totalQuantities, qty, totalPrice so they persist on refresh
+  useEffect(() => {
+    const cartItems = localStorage.getItem("cartItems");
+    const totalQuantities = localStorage.getItem("totalQuantities");
+    const totalPrice = localStorage.getItem("totalPrice");
+
+    if (cartItems) {
+      setCartItems(JSON.parse(cartItems));
+    }
+    if (totalQuantities) {
+      setTotalQuantities(JSON.parse(totalQuantities));
+    }
+    if (totalPrice) {
+      setTotalPrice(JSON.parse(totalPrice));
+    }
+  }, []);
+
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    localStorage.setItem("totalQuantities", JSON.stringify(totalQuantities));
+    localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
+  }, [cartItems, totalQuantities, totalPrice, qty]);
+
+  // clear local storage
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems?.find(
@@ -107,6 +158,8 @@ export const StateContext = ({ children }) => {
         onAdd,
         toggleCartItemQuantity,
         onRemove,
+        currentMonth,
+        timeLeft,
       }}
     >
       {children}

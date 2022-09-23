@@ -25,6 +25,9 @@ const Cart = () => {
     onRemove,
   } = useStateContext();
 
+  // convert totalprice to 2 decimal places
+  const totalPriceFixed = totalPrice.toFixed(2);
+
   const handleCheckout = async () => {
     const stripe = await getStripe();
 
@@ -54,7 +57,7 @@ const Cart = () => {
           onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
-          <span className="heading">Your cart</span>
+          <span className="heading">Your cart </span>
           <span className="cart-num-items">({totalQuantities} items)</span>
         </button>
 
@@ -62,15 +65,13 @@ const Cart = () => {
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
             <h3>Your cart is empty</h3>
-            <Link href="/">
-              <button
-                type="button"
-                className="btn"
-                onClick={() => setShowCart(false)}
-              >
-                Continue Shopping
-              </button>
-            </Link>
+            <button
+              type="button"
+              className="btn"
+              onClick={() => setShowCart(false)}
+            >
+              Continue Shopping
+            </button>
           </div>
         )}
 
@@ -83,11 +84,11 @@ const Cart = () => {
                   className="cart-product-image"
                 />
                 <div className="item-desc">
-                  <div className="flex top">
+                  <div className="item-desc-title">
                     <h5>{item.name}</h5>
-                    <h4>{item.price}</h4>
+                    <h4>$ {item.price}</h4>
                   </div>
-                  <div className="flex bottom">
+                  <div className="item-quantity-delete">
                     <div>
                       <p className="quantity-desc">
                         <span
@@ -125,7 +126,7 @@ const Cart = () => {
           <div className="cart-bottom">
             <div className="total">
               <h3>Subtotal:</h3>
-              <h3>${totalPrice}</h3>
+              <h3>${totalPriceFixed}</h3>
             </div>
             <button type="button" className="btn" onClick={handleCheckout}>
               Pay with stripe

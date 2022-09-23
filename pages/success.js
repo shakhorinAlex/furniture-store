@@ -17,7 +17,7 @@ const Success = () => {
   }, []);
 
   return (
-    <div className="success-wrapper">
+    <div className="success-wrapper container">
       <div className="success">
         <p className="success-icon">
           <BsBagCheckFill />
@@ -27,6 +27,7 @@ const Success = () => {
           Check your email for the recipt and order details.
         </p>
         <p className="description">
+          If you have any questions write to us at:
           <a className="email" href="mailto:aleksander.szachorin@gmail.com">
             aleksander.szachorin@gmail.com
           </a>
