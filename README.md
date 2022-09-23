@@ -1,17 +1,5 @@
 // TO DO
 
-Style Cart
-
-Show correct price with discount + Stripe
-
-Style Success Page
-
-Add products Page
-
-Search Option
-
-Add more products
-
 Add About us Page
 
 Add and style contact Page
