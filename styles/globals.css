@@ -914,9 +914,10 @@ fieldset {
 
 
 @media screen and (min-width:1450px) {
-  .hero {
+  .hero, .about__hero, .products-promo-banner  {
       max-height: 900px;
     }
+
 }
 /* Product Page */
 
