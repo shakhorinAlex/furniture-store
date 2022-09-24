@@ -693,7 +693,7 @@ fieldset {
   }
 
   .hero {
-    height: 100vh;
+    height: 90vh;
   }
   
   .hero__title {
@@ -912,6 +912,12 @@ fieldset {
   
 }
 
+
+@media screen and (min-width:1450px) {
+  .hero {
+      max-height: 900px;
+    }
+}
 /* Product Page */
 
 .product-detial-container {
