@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { BsTelephone, GrFormNext } from 'react-icons/bs'
+import { BsTelephone} from 'react-icons/bs'
 
 const Footer = () => {
   return (

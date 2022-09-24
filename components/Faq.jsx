@@ -1,5 +1,4 @@
 import React from 'react'
-import {GrFormAdd, GrFormClose} from 'react-icons/gr'
 
 const Faq = () => {
   return (

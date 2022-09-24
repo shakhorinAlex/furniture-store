@@ -25,7 +25,7 @@ function Home({ products }) {
             <li className="advantages-list_item">
               <img className="advantages__img" src="/guarantee.svg" alt="" />
               <h4 className="advantages__title">8 YEAR GUARANTEE</h4>
-              <p className="advantages__desc">For your 'peace' of mind</p>
+              <p className="advantages__desc">For your peace of mind</p>
             </li>
             <li className="advantages-list_item">
               <img className="advantages__img" src="/norust.svg" alt="" />

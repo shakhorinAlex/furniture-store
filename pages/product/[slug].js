@@ -31,23 +31,13 @@ const ProductDetails = ({ product, products }) => {
               src={urlFor(image && image[0])}
             />
           </div>
-          {/* <div className='small-images'>
-                    {image?.map((item, i) => (
-                        <img
-                            key={i} 
-                            src={urlFor(item)}
-                            className=''
-                            onMouseEnter=''
-                        />
-                    ))}
-                </div> */}
         </div>
 
         <div className="product-details-desc">
           <h1>{name}</h1>
           <p className="product-price">
             ${price}
-            <span className="normal-price">${normalPrice} 10% Off</span>{" "}
+            <span className="normal-price">${normalPrice} 10% Off</span>
           </p>
           <div className="product-reviews">
             <AiFillStar />
