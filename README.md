@@ -1,6 +1,5 @@
 // TO DO
 
-Add About us Page
 
 Add and style contact Page
 
