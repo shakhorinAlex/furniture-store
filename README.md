@@ -1,10 +1,3 @@
 // TO DO
 
-
-Add and style contact Page
-
-Images to <Image /> REACT component or to webp
-
-Show add to cart button on card product hover
-
-Add few colours options to products with toggler and save choosen one as image to checkout page
+Live site : (https://furniture-store-shakhorin.vercel.app/) [https://furniture-store-shakhorin.vercel.app/]
