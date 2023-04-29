@@ -35,8 +35,7 @@ export const StateContext = ({ children }) => {
   }, []);
 
   let foundProduct;
-  let index;  
-
+  let index;
 
   // save cartItems, totalQuantities, qty, totalPrice so they persist on refresh
   useEffect(() => {
@@ -55,14 +54,13 @@ export const StateContext = ({ children }) => {
     }
   }, []);
 
-
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     localStorage.setItem("totalQuantities", JSON.stringify(totalQuantities));
     localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
   }, [cartItems, totalQuantities, totalPrice, qty]);
 
-  // clear local storage
+  // catch error on item add to cart
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems?.find(

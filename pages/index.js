@@ -2,11 +2,23 @@ import React from "react";
 import { client } from "../lib/client";
 import { Product, Slideshow } from "../components";
 import Link from "next/link";
+import Image from "next/image";
 
 function Home({ products }) {
   return (
     <div>
       <section className="hero section">
+        <div className="hero__img-wrapper">
+          <Image
+            className="hero__img"
+            src="/images/heroBc.jpg"
+            alt="hero"
+            layout="fill"
+            objectFit="cover"
+            // placeholder="blur"
+          />
+        </div>
+
         <div className="container">
           <h1 className="hero__title">MODERN CONTEMPORARY OUTDOOR FURNITURE</h1>
           <p className="hero__desc">
@@ -55,8 +67,18 @@ function Home({ products }) {
         </div>
       </section>
       <section className="section quality">
+        <div className="quality__img-wrapper">
+          <Image
+            className="quality__img"
+            src="/images/qualityBc.jpg"
+            alt="quality"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+
         <div className="container">
-          <img className="quality__img" src="/quality.svg" alt="" />
+          <img className="quality__icon" src="/quality.svg" alt="" />
           <p className="quality__desc">COMMITED TO EUROPIAN MANUFACTURING</p>
           <h3 className="quality__title">
             Our <b>Products</b> are made with <b>high quality</b> european
@@ -73,35 +95,45 @@ function Home({ products }) {
           </p>
           <ul className="collection__container">
             <li className="collection__card card1">
-              <img
+              <Image
                 className="collection__img"
-                src="./images/collection4.jpg"
-                alt=""
+                src="/images/collection4.jpg"
+                alt="collection1"
+                layout="fill"
+                objectFit="cover"
               />
+
               <h4 className="collection__name">Collection 1</h4>
             </li>
             <li className="collection__card card2">
-              <img
+              <Image
                 className="collection__img"
-                src="./images/collection2.jpg"
-                alt=""
+                src="/images/collection3.jpg"
+                alt="collection2"
+                layout="fill"
+                objectFit="cover"
               />
               <h4 className="collection__name">Collection 2</h4>
             </li>
             <li className="collection__card card3">
-              <img
+              <Image
                 className="collection__img"
-                src="/images/collection3.jpg"
-                alt=""
+                src="/images/collection2.jpg"
+                alt="collection3"
+                layout="fill"
+                objectFit="cover"
               />
               <h4 className="collection__name">Collection 3</h4>
             </li>
             <li className="collection__card card4">
-              <img
+              <Image
                 className="collection__img"
-                src="./images/collection1.jpg"
-                alt=""
+                src="/images/collection1.jpg"
+                alt="collection4"
+                layout="fill"
+                objectFit="cover"
               />
+
               <h4 className="collection__name">Collection 4</h4>
             </li>
           </ul>
