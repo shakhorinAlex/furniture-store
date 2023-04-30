@@ -15,6 +15,7 @@ function Home({ products }) {
             alt="hero"
             layout="fill"
             objectFit="cover"
+            priority={true}
             // placeholder="blur"
           />
         </div>
@@ -74,6 +75,7 @@ function Home({ products }) {
             alt="quality"
             layout="fill"
             objectFit="cover"
+            priority={true}
           />
         </div>
 
