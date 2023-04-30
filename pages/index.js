@@ -11,7 +11,7 @@ function Home({ products }) {
         <div className="hero__img-wrapper">
           <Image
             className="hero__img"
-            src="/images/heroBc.jpg"
+            src="/images/heroBc.webp"
             alt="hero"
             layout="fill"
             objectFit="cover"
@@ -71,7 +71,7 @@ function Home({ products }) {
         <div className="quality__img-wrapper">
           <Image
             className="quality__img"
-            src="/images/qualityBc.jpg"
+            src="/images/qualityBc.webp"
             alt="quality"
             layout="fill"
             objectFit="cover"
