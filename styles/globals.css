@@ -414,11 +414,19 @@ img {
   justify-content: center;
   align-items: center;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  position: relative;
 }
 
 
 .hero__img {
   z-index: -2;
+}
+
+.hero__img-wrapper {
+  z-index: -1;
+
+  height: 100%;
+
 }
 
 .hero .container {
