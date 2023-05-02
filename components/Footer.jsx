@@ -45,21 +45,21 @@ const Footer = () => {
           </div>
           <div className="footer__social-media">
             <h3 className="footer__social-media--title">Follow Us</h3>
-            <a
-              className="social-media-icon"
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="/facebook.svg" alt="facebook" />
+            <a className="social-media-icon" href="#" rel="noreferrer">
+              <Image
+                src="/facebook.svg"
+                alt="facebook"
+                width={30}
+                height={30}
+              />
             </a>
-            <a
-              className="social-media-icon"
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="/instagram.svg" alt="instagram" />
+            <a className="social-media-icon" href="#" rel="noreferrer">
+              <Image
+                src="/instagram.svg"
+                alt="instagram"
+                width={30}
+                height={30}
+              />
             </a>
           </div>
         </div>

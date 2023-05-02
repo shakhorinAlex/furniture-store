@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { urlFor } from "../lib/client";
+import Image from "next/image";
 
 const Product = ({ product: { image, name, slug, price } }) => {
   const normalPrice = (price * 1.1).toFixed(2);
@@ -15,10 +16,18 @@ const Product = ({ product: { image, name, slug, price } }) => {
     <div className="product-card-container">
       <Link href={`/product/${slug.current}`}>
         <div className="product-card">
-          <img
+          {/* <img
             src={urlFor(image && image[0])}
             alt={name}
             className="product-card__image"
+            loading="lazy"
+          /> */}
+          <Image
+            src={urlFor(image && image[0])}
+            alt={name}
+            className="product-card__image"
+            width={300}
+            height={300}
           />
           <p className="product__name">{name}</p>
           <p className="product__price">

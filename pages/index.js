@@ -16,7 +16,6 @@ function Home({ products }) {
             layout="fill"
             objectFit="cover"
             priority={true}
-            // placeholder="blur"
           />
         </div>
 
@@ -36,17 +35,32 @@ function Home({ products }) {
         <div className="container">
           <ul className="advantages-list">
             <li className="advantages-list_item">
-              <img className="advantages__img" src="/guarantee.svg" alt="" />
+              <Image
+                src="/guarantee.svg"
+                alt="advantage1-image"
+                width={100}
+                height={100}
+              />
               <h4 className="advantages__title">8 YEAR GUARANTEE</h4>
               <p className="advantages__desc">For your peace of mind</p>
             </li>
             <li className="advantages-list_item">
-              <img className="advantages__img" src="/norust.svg" alt="" />
+              <Image
+                src="/norust.svg"
+                alt="advantage2-image"
+                width={100}
+                height={100}
+              />
               <h4 className="advantages__title">Rust Free</h4>
               <p className="advantages__desc">Quality Materials</p>
             </li>
             <li className="advantages-list_item">
-              <img className="advantages__img" src="/exclusive.svg" alt="" />
+              <Image
+                src="/exclusive.svg"
+                alt="advantage3-image"
+                width={100}
+                height={100}
+              />
               <h4 className="advantages__title">PREMIUM SERVICE</h4>
               <p className="advantages__desc">Premium delivery available</p>
             </li>
@@ -75,12 +89,11 @@ function Home({ products }) {
             alt="quality"
             layout="fill"
             objectFit="cover"
-            priority={true}
           />
         </div>
 
         <div className="container">
-          <img className="quality__icon" src="/quality.svg" alt="" />
+          <Image src="/quality.svg" alt="quality" width={110} height={110} />
           <p className="quality__desc">COMMITED TO EUROPIAN MANUFACTURING</p>
           <h3 className="quality__title">
             Our <b>Products</b> are made with <b>high quality</b> european
@@ -155,11 +168,12 @@ function Home({ products }) {
               dui etiam morbi morbi facilisi tristique.
             </p>
             <div className="reviews__stars-wrapper">
-              <img className="reviews__stars" src="/star.svg" alt="" />
-              <img className="reviews__stars" src="/star.svg" alt="" />
-              <img className="reviews__stars" src="/star.svg" alt="" />
-              <img className="reviews__stars" src="/star.svg" alt="" />
-              <img className="reviews__stars" src="/star.svg" alt="" />
+              <Image src="/star.svg" alt="star" width={30} height={30} />
+              <Image src="/star.svg" alt="star" width={30} height={30} />
+              <Image src="/star.svg" alt="star" width={30} height={30} />
+              <Image src="/star.svg" alt="star" width={30} height={30} />
+              <Image src="/star.svg" alt="star" width={30} height={30} />
+
               <p className="reviews__stars-person-name">John Doe</p>
             </div>
           </div>
