@@ -191,6 +191,15 @@ img {
   color: #3A5041;
 }
 
+.logo:hover a, .logo:focus a {
+  color: var(--red);
+}
+
+/* animation for hover of .logo a */
+.logo a {
+  transition: all 0.3s ease-in-out;
+}
+
 .cart-icon {
   font-size: 2.2rem;
   color: #545454;
@@ -264,6 +273,16 @@ img {
   justify-content: center;
 }
 
+/* button hover focus a nitamition */
+
+.footer-banner__button a {
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-banner__button a:hover, .footer-banner__button a:focus {
+  background-color: var(--red);
+}
+
 .footer__call-number {
   padding-left: .5rem;
 }
@@ -279,10 +298,14 @@ img {
   padding: 2rem 20px;
 }
 
-.footer .logo {
+.footer .logo a {
   color: #fff;
   font-size: 4rem;
   text-align: center;
+}
+
+.footer .logo a:focus, .footer .logo a:hover {
+  color: var(--red);
 }
 
 .footer__address {
@@ -290,6 +313,17 @@ img {
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.58);
   margin-bottom: 1rem;
+
+}
+
+.footer__address a {
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__address a:hover, .footer__address a:focus {
+  color: var(--red);
 }
 
 .address-title {
@@ -350,7 +384,15 @@ img {
   height: 30px;
   margin-right: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+/* social media icons hover focus animation */
+.social-media-icon img:hover, .social-media-icon img:focus {
+  transform: scale(1.1, 1.1);
+}
+
+
 
 /* Hero section */
 
@@ -405,6 +447,12 @@ img {
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 1.25rem 2rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.hero .btn:hover, .hero .btn:focus {
+  background-color: var(--green);
 }
 
 /* Advantage section */
@@ -524,6 +572,14 @@ img {
   color: #FFFFFF;
   text-align: center;
   padding: 1rem 1.5rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.product__button:hover, .product__button:focus {
+  background-color: var(--green);
+  /* transofrm */
+
 }
 
 /* Product collection */ 
@@ -710,9 +766,17 @@ img {
     line-height: 33px;
     color: #BEBFBE;
   }
+
+  /* animation for hover */
+  .nav-links__item a {
+    transition: all 0.4s ease-in-out;
+  }
   
-  .nav-links__item:hover {
-    color: var(--green);
+  .nav-links__item:hover a {
+    color: var(--red);
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--green);
+
   }
 
   .cart-icon {
@@ -1657,6 +1721,10 @@ details>summary::-webkit-details-marker {
   color: white;
 }
 
+.products__content a:hover, .products__content a:focus {
+  color: var(--red);
+}
+
 /* products search */
 
 
@@ -2026,7 +2094,6 @@ details>summary::-webkit-details-marker {
 }
 
 
-
 .contact__details--list-item {
   display: flex;
   align-items: flex-start;
@@ -2034,6 +2101,14 @@ details>summary::-webkit-details-marker {
   gap: 1.5rem;
 }
 
+.contact__details--list-item a {
+  transition: all .3s ease-in-out;
+
+}
+
+.contact__details--list-item a:hover {
+  color: var(--red);
+}
 
 
 .contact__details--icon {

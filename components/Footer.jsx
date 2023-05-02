@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="footer">
         <div className="footer__top">
           <div className="logo">
-            <Link href="/">S.</Link>
+            <Link href="/">Store.</Link>
           </div>
         </div>
         <div className="footer__bottom">
