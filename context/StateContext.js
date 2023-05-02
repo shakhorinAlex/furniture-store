@@ -37,7 +37,7 @@ export const StateContext = ({ children }) => {
   let foundProduct;
   let index;
 
-  // save cartItems, totalQuantities, qty, totalPrice so they persist on refresh
+  // save cartItems, totalQuantities, qty, totalPrice to localStorage
   useEffect(() => {
     const cartItems = localStorage.getItem("cartItems");
     const totalQuantities = localStorage.getItem("totalQuantities");
@@ -60,10 +60,9 @@ export const StateContext = ({ children }) => {
     localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
   }, [cartItems, totalQuantities, totalPrice, qty]);
 
-  // catch error on item add to cart
-
   const onAdd = (product, quantity) => {
-    const checkProductInCart = cartItems?.find(
+    // check if product is already in cart
+    const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
     );
 
@@ -72,6 +71,7 @@ export const StateContext = ({ children }) => {
     );
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
 
+    // if product is already in cart, update quantity
     if (checkProductInCart) {
       const updatedCartItems = cartItems.map((cartProduct) => {
         if (cartProduct._id === product._id)
@@ -79,16 +79,16 @@ export const StateContext = ({ children }) => {
             ...cartProduct,
             quantity: cartProduct.quantity + quantity,
           };
+        return cartProduct;
       });
 
       setCartItems(updatedCartItems);
     } else {
       product.quantity = quantity;
-
-      setCartItems([...cartItems, { ...product }]);
+      setCartItems([...cartItems, product]);
     }
 
-    toast.success(`${qty} ${product.name} added to cart`);
+    toast.success(`${qty} ${product.name} added to the cart.`);
   };
 
   const onRemove = (product) => {
