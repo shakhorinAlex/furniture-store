@@ -1,10 +1,19 @@
 import React from "react";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
+import Image from "next/image";
+
 const Contact = () => {
   return (
     <div className="contact">
-      <section className="contact__hero"></section>
+      <section className="contact__hero">
+        <Image
+          src="/images/contactBc.webp"
+          layout="fill"
+          objectFit="cover"
+          objectPosition={"bottom"}
+        />
+      </section>
       <section className="contact__details">
         <div className="container">
           <h1 className="contact__details--title">Contact Us</h1>

@@ -1991,10 +1991,10 @@ details>summary::-webkit-details-marker {
 .contact__hero {
     height: 50vh;
     width: 100%;
-    background-image: url(/images/contactBc.webp);
-    background-position: bottom;
+    /* background-image: url(/images/contactBc.webp); */
+    /* background-position: bottom;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     position: relative;
 }
 
