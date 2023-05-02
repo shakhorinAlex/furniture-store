@@ -152,13 +152,22 @@ img {
 }
 
 .bm-menu {
-  background: #373a47;
+  background: var(--green);
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+}
+
+.bm-menu a {
+  color:white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .bm-morph-shape {
-  fill: #373a47;
+  fill: var(--green);
 }
 
 .bm-item-list {
