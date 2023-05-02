@@ -8,6 +8,7 @@ import {
 } from "react-icons/ai";
 import { Product, Faq } from "../../components";
 import { useStateContext } from "../../context/StateContext";
+import Image from "next/image";
 
 const ProductDetails = ({ product, products }) => {
   const { name, image, details, price } = product;
@@ -87,7 +88,15 @@ const ProductDetails = ({ product, products }) => {
       </div>
 
       <div className="products-quality">
-        <img src="/images/products-quality.jpg" alt="product quality img"></img>
+        <div className="products-quaility__right">
+          <Image
+            src="/images/products-quality.jpg"
+            alt="product quality img"
+            width={500}
+            height={500}
+            objectFit="cover"
+          />
+        </div>
         <div className="products-quaility__right">
           <h2>Products of Quality</h2>
           <p>

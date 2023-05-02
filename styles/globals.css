@@ -1190,12 +1190,21 @@ img {
 
 .products-quality {
   text-align: left;
+  position: relative;
+ /* grid 2 rows */
+ display: flex;
+ flex-direction: column;
+  justify-content: center; 
+
+  gap: 1rem;
+  
+
 }
 
 .products-quality img {
-  width: 100%;
-  margin-bottom: 1rem;
   border-radius: .25rem;
+  /* margin-bottom: 1rem; */
+
 }
 
 .products-quality h2 {
@@ -1301,7 +1310,7 @@ details>summary::-webkit-details-marker {
   }
 
   .products-quality img {
-    max-height: 200px;
+    /* max-height: 200px; */
     object-fit: cover;
   }
 }
@@ -1311,6 +1320,7 @@ details>summary::-webkit-details-marker {
   .product-detial-container {
     display: flex;
     gap: 5rem;
+    justify-content: space-between;
   }
 
   .product-detail-image {
