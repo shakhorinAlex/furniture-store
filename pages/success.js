@@ -4,6 +4,7 @@ import { BsBagCheckFill } from "react-icons/bs";
 
 import { useStateContext } from "../context/StateContext";
 import { fireConfetti } from "../lib/utils";
+import Image from "next/image";
 
 const Success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
@@ -18,6 +19,17 @@ const Success = () => {
 
   return (
     <div className="success-wrapper container">
+      <div className="hero__img-wrapper">
+        <Image
+          className="hero__img"
+          src="/images/heroBc.webp"
+          alt="hero"
+          layout="fill"
+          objectFit="cover"
+          priority={true}
+          // placeholder="blur"
+        />
+      </div>
       <div className="success">
         <p className="success-icon">
           <BsBagCheckFill />
