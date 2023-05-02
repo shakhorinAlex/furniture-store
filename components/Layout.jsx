@@ -8,6 +8,7 @@ const Layout = ({ children }) => {
     <div className="main-container">
       <Head>
         <title>Furniture Store</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
         <Navbar />
