@@ -16,6 +16,7 @@ function Home({ products }) {
             layout="fill"
             objectFit="cover"
             priority={true}
+            placeholder="blurDataURL"
           />
         </div>
 
@@ -89,6 +90,7 @@ function Home({ products }) {
             alt="quality"
             layout="fill"
             objectFit="cover"
+            placeholder="blurDataURL"
           />
         </div>
 
@@ -116,6 +118,7 @@ function Home({ products }) {
                 alt="collection1"
                 layout="fill"
                 objectFit="cover"
+                placeholder="blurDataURL"
               />
 
               <h4 className="collection__name">Collection 1</h4>
@@ -127,6 +130,7 @@ function Home({ products }) {
                 alt="collection2"
                 layout="fill"
                 objectFit="cover"
+                placeholder="blurDataURL"
               />
               <h4 className="collection__name">Collection 2</h4>
             </li>
@@ -137,6 +141,7 @@ function Home({ products }) {
                 alt="collection3"
                 layout="fill"
                 objectFit="cover"
+                placeholder="blurDataURL"
               />
               <h4 className="collection__name">Collection 3</h4>
             </li>
@@ -147,6 +152,7 @@ function Home({ products }) {
                 alt="collection4"
                 layout="fill"
                 objectFit="cover"
+                placeholder="blurDataURL"
               />
 
               <h4 className="collection__name">Collection 4</h4>
