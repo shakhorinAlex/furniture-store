@@ -2,8 +2,28 @@ import React from "react";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import Image from "next/image";
+import { useState } from "react";
+import { BsFillCheckCircleFill } from "react-icons/bs";
+import Link from "next/link";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    toast.success("Form submitted successfully!", {
+      position: "top-center",
+      autoClose: 3000, // Duration in milliseconds
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    setShowThankYou(true);
+  };
+
   return (
     <div className="contact">
       <section className="contact__hero">
@@ -62,39 +82,64 @@ const Contact = () => {
 
       <section className="contact__form">
         <div className="container">
-          <h1 className="contact__form--title">Send Us a Message</h1>
-          <p className="contact__form--description">
-            Have a question or need assistance? We are here to help!
-          </p>
-          <form className="contact__form--form">
-            <div className="contact__form--form-group">
-              <label htmlFor="Email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-              />
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Enter your name"
-              />
-              <label htmlFor="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="Enter your message"
-              ></textarea>
-              <button type="submit" className="btn">
-                Send message
-              </button>
+          {!showThankYou ? (
+            <div className="contact__form--wrapper">
+              <h1 className="contact__form--title">Send Us a Message</h1>
+              <p className="contact__form--description">
+                Have a question or need assistance? We are here to help!
+              </p>
+              <form className="contact__form--form" onSubmit={handleSubmit}>
+                <div className="contact__form--form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="Enter your message"
+                  ></textarea>
+                  <button type="submit" className="btn">
+                    Send message
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+          ) : (
+            <div className="success">
+              <p className="success-icon">
+                <BsFillCheckCircleFill />
+              </p>
+              <h2>Thank you for your message!</h2>
+              <p className="description">
+                If you have any questions write to us at:
+                <a
+                  className="email"
+                  href="mailto:aleksander.szachorin@gmail.com"
+                >
+                  aleksander.szachorin@gmail.com
+                </a>
+              </p>
+              <Link href="/products">
+                <button type="button" className="btn">
+                  Continue Shopping
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </section>
     </div>
