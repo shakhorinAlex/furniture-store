@@ -23,8 +23,8 @@ function Home({ products }) {
         <div className="container">
           <h1 className="hero__title">MODERN CONTEMPORARY OUTDOOR FURNITURE</h1>
           <p className="hero__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper eget
-            ultrices gravida gravida. Suspendisse pharetra quis eros facilisi.
+            Transform your living space with our exquisite collection of modern
+            contemporary outdoor furniture.
           </p>
           <Link href="/products">
             <button className="btn">Shop now</button>
@@ -72,8 +72,8 @@ function Home({ products }) {
         <div className="container">
           <h2 className="products__title">Ready To Ship</h2>
           <p className="products__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est id
-            pretium pellentesque leo. Lorem.
+            Browse our wide selection of handpicked furniture pieces, ready to
+            be delivered to your doorstep.
           </p>
           <div className="products-list">
             {products?.map((product) => (
@@ -107,8 +107,8 @@ function Home({ products }) {
         <div className="container">
           <h2 className="collection__title">Our Collection</h2>
           <p className="collection__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est id
-            pretium pellentesque leo. Lorem.
+            Immerse yourself in our diverse collection of furniture designs,
+            meticulously created to complement any outdoor setting.
           </p>
           <ul className="collection__container">
             <li className="collection__card card1">
@@ -165,13 +165,15 @@ function Home({ products }) {
           <div className="reviews__left-side">
             <h2 className="reviews__title">Perfect furniture for Your home</h2>
             <p className="reviews__desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dictum
-              quam nisi, eget est commodo neque aliquam leo. Rhoncus habitant eu
-              aliquam elit ipsum sagittis, sit proin. Donec magna sapien et
-              blandit vehicula vestibulum. Laoreet sagittis augue quis lacinia.
-              Ut enim eget semper odio pretium rhoncus. Blandit velit augue
-              donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit
-              dui etiam morbi morbi facilisi tristique.
+              At Furniture Store, we take pride in providing our customers with
+              the perfect furniture solutions for their homes. But don't just
+              take our word for it — listen to what our valued customers have to
+              say about their experience with our furniture. From the moment
+              they received their orders to the way our furniture transformed
+              their living spaces, our customers have been thrilled with the
+              quality, comfort, and style of our products. We are committed to
+              going above and beyond to ensure your complete satisfaction, so
+              you can trust us to deliver the furniture of your dreams.
             </p>
             <div className="reviews__stars-wrapper">
               <Image src="/star.svg" alt="star" width={30} height={30} />

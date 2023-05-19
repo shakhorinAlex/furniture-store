@@ -8,10 +8,11 @@ const About = () => {
         <div className="container">
           <h1 className="about__hero__title">About Us</h1>
           <p className="about__hero__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus
-            rhoncus montes, sem lacus, sed sit sed. Scelerisque aliquam justo
-            tincidunt vitae ultricies enim eget. Et sodales quis odio at risus
-            semper. Et ante in.
+            Your premier destination for high-quality furniture that combines
+            style and functionality. We believe that your home should be a
+            reflection of your unique taste and personality, and that's why we
+            strive to offer a wide selection of modern contemporary furniture
+            that caters to various design preferences.
           </p>
           <Link href="/products">
             <button className="btn">See our products</button>
@@ -28,12 +29,13 @@ const About = () => {
           <div className="about__content--right-side">
             <h2 className="about__content--title">Store Furniture</h2>
             <p className="about__content--description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
-              nulla a ut diam et, sapien dis. Iaculis turpis dui sed ipsum
-              etiam. Habitant feugiat at enim pharetra. Lacus, dolor viverra
-              amet purus nulla a, donec in egestas. Condimentum aenean odio
-              pretium justo. Vitae in ut quam fermentum, eget. Luctus fermentum
-              nulla magna eget at dapibus urna sit.
+              At Furniture Store, we are passionate about providing our
+              customers with exceptional furniture pieces that enhance their
+              living spaces. Our team of experienced designers and craftsmen
+              work tirelessly to create furniture that is not only aesthetically
+              pleasing but also built to last. Each piece in our collection is
+              meticulously crafted with attention to detail, using the finest
+              materials and techniques.
             </p>
           </div>
         </div>

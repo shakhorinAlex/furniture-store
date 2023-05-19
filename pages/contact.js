@@ -18,8 +18,8 @@ const Contact = () => {
         <div className="container">
           <h1 className="contact__details--title">Contact Us</h1>
           <p className="contact__details--description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
-            nulla a ut diam et, sapien dis
+            We value your feedback and are here to assist you with any inquiries
+            or concerns you may have.
           </p>
           <ul className="contact__details--list">
             <li className="contact__details--list-item">
@@ -64,7 +64,7 @@ const Contact = () => {
         <div className="container">
           <h1 className="contact__form--title">Send Us a Message</h1>
           <p className="contact__form--description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Have a question or need assistance? We're here to help!
           </p>
           <form className="contact__form--form">
             <div className="contact__form--form-group">
