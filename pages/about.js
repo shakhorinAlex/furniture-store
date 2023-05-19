@@ -10,7 +10,7 @@ const About = () => {
           <p className="about__hero__description">
             Your premier destination for high quality furniture that combines
             style and functionality. We believe that your home should be a
-            reflection of your unique taste and personality, and that's why we
+            reflection of your unique taste and personality, and that is why we
             strive to offer a wide selection of modern contemporary furniture
             that caters to various design preferences.
           </p>

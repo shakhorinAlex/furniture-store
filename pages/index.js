@@ -166,7 +166,7 @@ function Home({ products }) {
             <h2 className="reviews__title">Perfect furniture for Your home</h2>
             <p className="reviews__desc">
               At Furniture Store, we take pride in providing our customers with
-              the perfect furniture solutions for their homes. But don't just
+              the perfect furniture solutions for their homes. But do not just
               take our word for it, listen to what our valued customers have to
               say about their experience with our furniture. From the moment
               they received their orders to the way our furniture transformed
