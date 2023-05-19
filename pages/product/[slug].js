@@ -100,14 +100,15 @@ const ProductDetails = ({ product, products }) => {
         <div className="products-quaility__right">
           <h2>Products of Quality</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
-            convallis semper tortor, ipsum aliquam sit. Ut cras volutpat
-            suscipit elementum dolor at vitae. Elementum hac fringilla sed enim
-            natoque aliquam gravida orci commodo. Duis eget non mattis quis
-            ipsum. Dolor mattis tristique enim netus viverra purus. Id enim leo,
-            vitae egestas sit eget id enim. Dapibus placerat ante ornare nisl.
-            Sit augue nunc felis, accumsan diam fusce. Fringilla vulputate orci
-            aliquet interdum blandit et faucibus et.
+            In the realm of disposable furniture, we stand tall, offering
+            products that are designed to endure. Our offerings are a fusion of
+            meticulous craftsmanship, superior design, and durable materials,
+            all coming together to create pieces that truly last. From luxurious
+            sofas that anchor your living spaces, to comfortable chairs that
+            invite relaxation, to spacious beds that turn your bedrooms into
+            havens of rest, every piece speaks of the excellence we strive for.
+            Choose quality, choose longevity, choose our products for a home
+            that mirrors your discerning tastes.
           </p>
         </div>
       </div>
