@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-banner__content">
           <h2 className="footer-banner__title">Get 10% off your first order</h2>
           <p className="footer-banner__text">
-            We're delighted to offer you an exclusive discount of 10% off on
+            We are delighted to offer you an exclusive discount of 10% off on
             your first order.
           </p>
         </div>

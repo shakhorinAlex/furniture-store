@@ -8,7 +8,7 @@ const About = () => {
         <div className="container">
           <h1 className="about__hero__title">About Us</h1>
           <p className="about__hero__description">
-            Your premier destination for high-quality furniture that combines
+            Your premier destination for high quality furniture that combines
             style and functionality. We believe that your home should be a
             reflection of your unique taste and personality, and that's why we
             strive to offer a wide selection of modern contemporary furniture
