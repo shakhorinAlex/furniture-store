@@ -64,7 +64,7 @@ const Contact = () => {
         <div className="container">
           <h1 className="contact__form--title">Send Us a Message</h1>
           <p className="contact__form--description">
-            Have a question or need assistance? We're here to help!
+            Have a question or need assistance? We are here to help!
           </p>
           <form className="contact__form--form">
             <div className="contact__form--form-group">
