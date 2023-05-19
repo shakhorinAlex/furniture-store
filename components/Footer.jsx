@@ -2,8 +2,26 @@ import React from "react";
 import Link from "next/link";
 import { BsTelephone } from "react-icons/bs";
 import Image from "next/image";
+import { useState } from "react";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 
 const Footer = () => {
+  const [newsletterThankYou, setNewsletterThankYou] = useState(false);
+
+  const handleNewsletterSubmit = (event) => {
+    event.preventDefault();
+    toast.success("Thanks for subscribing to newsletter", {
+      position: "top-center",
+      autoClose: 5000, // Duration in milliseconds
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    setNewsletterThankYou(true);
+  };
+
   return (
     <div className="footer-container">
       <div className="footer-banner">
@@ -38,10 +56,24 @@ const Footer = () => {
           </address>
           <div className="footer__join-us">
             <h3 className="footer__join-us--title">Join Us for Good Offers</h3>
-            <form className="footer__join-us--form">
-              <input type="email" placeholder="Enter your email" />
-              <button type="submit">Join</button>
-            </form>
+            {!newsletterThankYou ? (
+              <div className="footer__join-us-thx-wrapper">
+                <span className="footer__join-us--text-icon">
+                  <BsFillCheckCircleFill />
+                </span>
+                <p className="footer__join-us--text">
+                  Thanks for subscribing to newsletter
+                </p>
+              </div>
+            ) : (
+              <form
+                className="footer__join-us--form"
+                onSubmit={handleNewsletterSubmit}
+              >
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">Join</button>
+              </form>
+            )}
           </div>
           <div className="footer__social-media">
             <h3 className="footer__social-media--title">Follow Us</h3>

@@ -382,6 +382,18 @@ img {
   background-color: var(--green);
 }
 
+.footer__join-us-thx-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__join-us--text-icon {
+  color: var(--red);
+  font-size: 1.35rem;
+}
+
 .footer__social-media {
   display: flex;
   gap: .625rem;
