@@ -14,7 +14,7 @@ const Contact = () => {
     event.preventDefault();
     toast.success("Form submitted successfully!", {
       position: "top-center",
-      autoClose: 3000, // Duration in milliseconds
+      autoClose: 5000, // Duration in milliseconds
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
