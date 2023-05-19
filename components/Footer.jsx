@@ -10,15 +10,6 @@ const Footer = () => {
 
   const handleNewsletterSubmit = (event) => {
     event.preventDefault();
-    toast.success("Thanks for subscribing to newsletter", {
-      position: "top-center",
-      autoClose: 5000, // Duration in milliseconds
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
     setNewsletterThankYou(true);
   };
 
@@ -56,7 +47,7 @@ const Footer = () => {
           </address>
           <div className="footer__join-us">
             <h3 className="footer__join-us--title">Join Us for Good Offers</h3>
-            {!newsletterThankYou ? (
+            {newsletterThankYou ? (
               <div className="footer__join-us-thx-wrapper">
                 <span className="footer__join-us--text-icon">
                   <BsFillCheckCircleFill />
