@@ -73,7 +73,7 @@ const Contact = () => {
               </p>
               <div className="contact__details--list-item_text">
                 <h3 className="contact__details--list-item-title">Address</h3>
-                <a href="#">123 Street, City, State, 12345</a>
+                <p>123 Street, City, State, 12345</p>
               </div>
             </li>
           </ul>
