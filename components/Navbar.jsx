@@ -4,9 +4,15 @@ import { AiOutlineShopping } from "react-icons/ai";
 import Sidebar from "./Sidebar";
 import { Cart } from "./";
 import { useStateContext } from "../context/StateContext";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
+
   const { showCart, setShowCart, totalQuantities } = useStateContext();
+
+  // change class if page is active tab
+
   return (
     <nav className="">
       <div className="navbar" id="navbar">
@@ -15,16 +21,32 @@ const Navbar = () => {
             <Sidebar />
           </div>
           <ul className="nav-links">
-            <li className="nav-links__item">
+            <li
+              className={`nav-links__item ${
+                router.pathname === "/" && "active-nav-link"
+              }`}
+            >
               <Link href="/">Home</Link>
             </li>
-            <li className="nav-links__item">
+            <li
+              className={`nav-links__item ${
+                router.pathname === "/products" && "active-nav-link"
+              }`}
+            >
               <Link href="/products">Products</Link>
             </li>
-            <li className="nav-links__item">
+            <li
+              className={`nav-links__item ${
+                router.pathname === "/about" && "active-nav-link"
+              }`}
+            >
               <Link href="/about">About Us</Link>
             </li>
-            <li className="nav-links__item">
+            <li
+              className={`nav-links__item ${
+                router.pathname === "/contact" && "active-nav-link"
+              }`}
+            >
               <Link href="/contact">Contact</Link>
             </li>
           </ul>

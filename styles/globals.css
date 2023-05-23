@@ -799,6 +799,10 @@ img {
 
   }
 
+  .active-nav-link {
+    border-bottom: 2px solid var(--green);
+  }
+
   .cart-icon {
     position: absolute;
     right: 3rem;
