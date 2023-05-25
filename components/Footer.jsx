@@ -61,7 +61,7 @@ const Footer = () => {
                 className="footer__join-us--form"
                 onSubmit={handleNewsletterSubmit}
               >
-                <input type="email" placeholder="Enter your email" />
+                <input type="email" placeholder="Enter your email" required />
                 <button type="submit">Join</button>
               </form>
             )}
