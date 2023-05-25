@@ -3,8 +3,16 @@ import { client } from "../lib/client";
 import { Product, Slideshow } from "../components";
 import Link from "next/link";
 import Image from "next/image";
+// import { useRef } from "react";
+// import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 function Home({ products }) {
+  // const scrollRef = useRef();
+
+  // const scroll = (scrollOffset) => {
+  //   scrollRef.current.scrollLeft += scrollOffset;
+  // };
+
   return (
     <div>
       <section className="hero section">
@@ -75,10 +83,21 @@ function Home({ products }) {
             Browse our wide selection of handpicked furniture pieces, ready to
             be delivered to your doorstep.
           </p>
-          <div className="products-list">
-            {products?.map((product) => (
-              <Product key={product._id} product={product} />
-            ))}
+          {/* <div className="scroll-wrapper">
+            <div className="scroll-left" onClick={() => scroll(-220)}>
+              <FaArrowCircleLeft />
+            </div>
+            <div className="scroll-right" onClick={() => scroll(220)}>
+              <FaArrowCircleRight />
+            </div>
+          </div> */}
+
+          <div className="products-wrapper">
+            <div className="products-list">
+              {products?.map((product) => (
+                <Product key={product._id} product={product} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

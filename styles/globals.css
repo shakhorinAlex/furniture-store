@@ -767,6 +767,23 @@ img {
   letter-spacing: 1px;
   color: #545454;
 }
+/* 
+ .scroll-wrapper {
+   display: flex;
+   gap: .5rem;
+   justify-content: space-between;
+ }
+
+ .products-list {
+   display: flex;
+   overflow-x: scroll;
+   scroll-behavior: smooth;
+ }
+
+ .scroll-left,
+ .scroll-right {
+   font-size: 32px;
+ } */
 
 
 @media screen and (min-width:768px) {
@@ -1061,7 +1078,6 @@ img {
   }
 
 
-  
 }
 
 
